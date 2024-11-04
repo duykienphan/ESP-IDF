@@ -1,0 +1,1549 @@
+[0;32mI (6335) i2c-master: Received Data: ED is ONLE[0m
+[0;32��Hh�ښ�j%�(36)�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  3 2024 08:50:41[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad00h ( 44288) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ad28 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d0c4 vaddr=40080000 size=02f54h ( 12116) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15de4h ( 89572) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=00035e0c vaddr=40082f54 size=0b0a0h ( 45216) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (202) cpu_start: Multicore app[0m
+[0;32mI (210) cpu_start: Pro cpu start user code[0m
+[0;32mI (210) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (210) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     i2c_master[0m
+[0;32mI (218) app_init: App version:      1[0m
+[0;32mI (223) app_init: Compile time:     Nov  3 2024 08:50:22[0m
+[0;32mI (229) app_init: ELF file SHA256:  7ca047f1c...[0m
+[0;32mI (234) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (239) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (244) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (249) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (261) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 3FFB2C70 len 0002D390 (180 KiB): DRAM[0m
+[0;32mI (273) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (280) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (286) heap_init: At 4008E000 len 00012000 (72 KiB): IRAM[0m
+[0;32mI (294) spi_flash: detected chip: generic[0m
+[0;32mI (297) spi_flash: flash io: dio[0m
+[0;33mW (301) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (314) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (325) main_task: Started on CPU0[0m
+[0;32mI (335) main_task: Calling app_main()[0m
+[0;32mI (335) i2c-master: I2C initialized successfully[0m
+[0;32mI (335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (1335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (2335) i2c-master: Received Data: D is OFFLE[0m
+[0;32mI (2335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (3335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (4335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (4335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (5335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (6335) i2c-master: Received Data:  is OFFLED[0m
+[0;32mI (6335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (7335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (8335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (8335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (9335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (10335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (10335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (11335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (12335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (12335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (13335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (14335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (14335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (15335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (16335) i2c-master: Received Data:  OFFLED is[0m
+[0;32mI (16335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (17335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (18335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (18335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (19335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (20335) i2c-master: Received Data: OFFLED is [0m
+[0;32mI (20335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (21335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (22335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (22335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (23335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (24335) i2c-master: Received Data: FFLED is O[0m
+[0;32mI (24335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (25335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (26335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (26335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (27335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (28335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (28335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (29335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (30335) i2c-master: Received Data: LED is OFF[0m
+[0;32mI (30335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (31335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (32335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (32335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (33335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (34335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (34335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (35335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (36335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (36335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (37335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (38335) i2c-master: Received Data: D is OFFLE[0m
+[0;32mI (38335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (39335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (40335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (40335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (41335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (42335) i2c-master: Received Data:  is OFFLED[0m
+[0;32mI (42335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (43335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (44335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (44335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (45335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (46335) i2c-master: Received Data: is OFFLED [0m
+[0;32mI (46335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (47335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (48335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (48335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (49335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (51335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (51335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (52335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (53335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (53335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (54335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (55335) i2c-master: Received Data:  OFFLED is[0m
+[0;32mI (55335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (56335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (57335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (57335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (58335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (59335) i2c-master: Received Data: OFFLED is [0m
+[0;32mI (59335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (60335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (61335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (61335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (62335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (63335) i2c-master: Received Data: FFLED is O[0m
+[0;32mI (63335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (64335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (65335) i2c-master: Received Data: FFLED is O[0m
+[0;32mI (65335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (66335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (67335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (67335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (68335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (69335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (69335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (70335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (71335) i2c-master: Received Data: LED is OFF[0m
+[0;32mI (71335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (72335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (73335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (73335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (74335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (75335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (75335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (76335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (77335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (77335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (78335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (79335) i2c-master: Received Data: D is OFFLE[0m
+[0;32mI (79335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (80335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (81335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (81335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (82335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (83335) i2c-master: Received Data:  is OFFLED[0m
+[0;32mI (83335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (84335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (85335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (85335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (86335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (87335) i2c-master: Received Data: is OFFLED [0m
+[0;32mI (87335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (88335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (89335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (89335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (90335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (91335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (91335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (92335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (93335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (93335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (94335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (95335) i2c-master: Received Data:  OFFLED is[0m
+[0;32mI (95335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (96335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (97335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (97335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (98335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (99335) i2c-master: Received Data: OFFLED is [0m
+[0;32mI (99335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (100335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (101335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (101335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (102335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (103335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (103335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (104335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (105335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (105335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (106335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (107335) i2c-master: Received Data: LED is OFF[0m
+[0;32mI (107335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (108335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (109335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (109335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (110335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (111335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (111335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (112335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (113335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (113335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (114335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (115335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (115335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (116335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (117335) i2c-master: Received Data:  is OFFLED[0m
+[0;32mI (117335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (118335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (119335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (119335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (120335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (121335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (121335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (122335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (123335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (123335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (124335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (125335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (125335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (126335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (127335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (127335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (128335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (129335) i2c-master: Received Data: OFFLED is [0m
+[0;32mI (129335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (130335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (131335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (131335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (132335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (133335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (133335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (134335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (135335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (135335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (136335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (137335) i2c-master: Received Data: LED is OFF[0m
+[0;32mI (137335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (138335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (139335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (139335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (140335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (141335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (141335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (142335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (143335) i2c-master: Received Data: D is OFFLE[0m
+[0;32mI (143335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (144335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (145335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (145335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (146335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (147335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (147335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (148335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (149335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (149335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (150335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (151335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (151335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (152335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (153335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (153335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (154335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (155335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (155335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (156335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (157335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (157335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (158335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (159335) i2c-master: Received Data: FFLED is O[0m
+[0;32mI (159335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (160335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (161335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (161335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (162335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (163335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (163335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (164335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (165335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (165335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (166335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (167335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (167335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (168335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (169335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (169335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (170335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (171335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (171335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (172335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (173335) i2c-master: Received Data:  is OFFLED[0m
+[0;32mI (173335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (174335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (175335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (175335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (176335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (177335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (177335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (178335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (179335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (179335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (180335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (181335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (181335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (182335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (183335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (183335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (184335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (185335) i2c-master: Received Data: OFFLED is [0m
+[0;32mI (185335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (186335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (187335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (187335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (188335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (189335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (189335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (190335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (191335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (191335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (192335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (193335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (193335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (194335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (195335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (195335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (196335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (197335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (197335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (198335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (199335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (199335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (200335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (201335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (201335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (202335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (203335) i2c-master: Received Data: is OFFLED [0m
+[0;32mI (203335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (204335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (205335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (205335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (206335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (207335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (207335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (208335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (209335) i2c-master: Received Data:  OFFLED is[0m
+[0;32mI (209335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (210335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (211335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (211335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (212335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (213335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (213335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (214335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (215335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (215335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (216335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (217335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (217335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (218335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (219335) i2c-master: Received Data: LED is OFF[0m
+[0;32mI (219335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (220335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (221335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (221335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (222335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (223335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (223335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (224335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (225335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (225335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (226335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (227335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (227335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (228335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (229335) i2c-master: Received Data:  is OFFLED[0m
+[0;32mI (229335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (230335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (231335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (231335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (232335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (233335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (233335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (234335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (235335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (235335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (236335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (237335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (237335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (238335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (239335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (239335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (240335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (241335) i2c-master: Received Data: OFFLED is [0m
+[0;32mI (241335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (242335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (243335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (243335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (244335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (245335) i2c-master: Received Data: NLED is OF[0m
+[0;32mI (245335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (246335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (247335) i2c-master: Received Data: FLED is ON[0m
+[0;32mI (247335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (248335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (249335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (249335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (250335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (251335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (251335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (252335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (253335) i2c-master: Received Data: D is OFFLE[0m
+[0;32mI (253335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (254335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (255335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (255335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (256335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (257335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (257335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (258335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (259335) i2c-master: Received Data: is OFFLED [0m
+[0;32mI (259335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (260335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (261335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (261335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (262335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (263335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (263335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (264335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (265335) i2c-master: Received Data:  OFFLED is[0m
+[0;32mI (265335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (266335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (267335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (267335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (268335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (269335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (269335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (270335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (271335) i2c-master: Received Data: NLED is ON[0m
+[0;32mI (271335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (272335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (273335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (273335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (274335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (275335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (275335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (276335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (277335) i2c-master: Received Data: ED is ONLE[0m
+[0;32mI (277335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (278335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (279335) i2c-master: Received Data: D is ONLED[0m
+[0;32mI (279335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (280335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (281335) i2c-master: Received Data:  is OFFLED[0m
+[0;32mI (281335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (282335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (283335) i2c-master: Received Data:  is ONLED [0m
+[0;32mI (283335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (284335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (285335) i2c-master: Received Data: is ONLED i[0m
+[0;32mI (285335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (286335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (287335) i2c-master: Received Data: s OFFLED i[0m
+[0;32mI (287335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (288335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (289335) i2c-master: Received Data: s ONLED is[0m
+[0;32mI (289335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (290335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (291335) i2c-master: Received Data:  ONLED is [0m
+[0;32mI (291335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (292335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (293335) i2c-master: Received Data: OFFLED is [0m
+[0;32mI (293335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (294335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (295335) i2c-master: Received Data: ONLED is O[0m
+[0;32mI (295335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (296335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (297335) i2c-master: Received Data: FFLED is O[0m
+[0;32mI (297335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (298335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (299335) i2c-master: Received Data: NLED is ON[0m
+[0;32mI (299335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (300335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (301335) i2c-master: Received Data: LED is OFF[0m
+[0;32mI (301335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (302335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (303335) i2c-master: Received Data: LED is ONL[0m
+[0;32mI (303335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (304335) i2c-master: Sending Message = LED_OFF[0m
+[0;32mI (305335) i2c-master: Received Data: ED is OFFL[0m
+[0;32mI (305335) i2c-master: Sending Message = LED_ON[0m
+[0;32mI (306335) i2c-master: Sending Message = LED_OFF[0m
+ bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab60h ( 43872) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ab88 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cf24 vaddr=40080000 size=030f4h ( 12532) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1554ch ( 87372) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=00035574 vaddr=400830f4 size=0ae5ch ( 44636) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (209) cpu_start: Pro cpu start user code[0m
+[0;32mI (209) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (209) app_init: Application information:[0m
+[0;32mI (212) app_init: Project name:     i2c_slave[0m
+[0;32mI (217) app_init: App version:      1[0m
+[0;32mI (222) app_init: Compile time:     Nov  3 2024 07:54:02[0m
+[0;32mI (228) app_init: ELF file SHA256:  07b680123...[0m
+[0;32mI (233) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (238) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (243) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (248) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (253) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (266) heap_init: At 3FFB2C68 len 0002D398 (180 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (278) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 4008DF50 len 000120B0 (72 KiB): IRAM[0m
+[0;32mI (293) spi_flash: detected chip: generic[0m
+[0;32mI (296) spi_flash: flash io: dio[0m
+[0;33mW (300) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (313) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (334) i2c-slave: I2C Slave initialized successfully[0m
+[0;32mI (1314) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (2514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (3514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (4514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (5514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (6514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (7514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (8514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (9514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (10514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (11514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (12514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (13514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (14514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (15514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (16514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (17514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (18514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (19514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (20514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (21514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (22514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (23514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (24514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (25514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (26514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (27514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (28514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (29514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (30514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (31514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (32514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (33514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (34514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (35514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (36514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (37514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (38514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (39514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (40514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (41514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (42514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (43514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (44514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (46514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (48514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (49514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (50514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (51514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (52514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (53514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (54514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (55514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (56514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (57514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (58514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (59514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (60514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (61514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (62514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (63414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (64414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (65414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (66414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (67514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (68414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (69514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (70514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (71514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (73514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (75514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (76514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (77514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (78414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (79514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (80514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (81514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (83414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (84514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (85414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (86414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (88414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (89414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (90414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (91414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (92414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (93514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (94414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (95514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (96514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (97514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (98514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (99414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (100514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (101414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (102414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (103514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (106514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (107514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (108514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (109414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (110514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (111514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (112514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (113514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (115414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (116414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (117414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (118414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (119514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (120414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (121414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (122414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (123414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (124514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (125414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (127514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (128514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (129514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (130514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (131514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (132514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (133414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (134514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (135414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (136514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (137514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (138514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (139514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (140414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (141514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (142414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (143414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (144414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (145414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (146514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (147414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (148514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (149514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (150514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (151514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (152414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (153414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (154514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (155514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (156514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (157514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (158414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (159514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (160414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (161414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (162414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (163414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (164514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (165414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (166514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (167514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (168514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (169514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (170414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (171514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (172414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (173414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (174414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (175414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (176514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (177514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (179514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (180514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (181414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (183514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (184514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (185514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (186514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (187414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (188514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (189514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (190514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (191414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (192514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (193514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (194514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (195514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (196414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (197514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (198414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (199414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (200414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (201414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (202514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (205414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (206414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (207514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (208514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (209514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (210514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (211414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (212514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (213414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (216414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (217414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (218414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (219414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (220414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (221414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (222514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (223414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (224514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (225514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (226514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (227514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (228414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (229514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (230414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (231414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (232414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (233414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (234514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (235514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (236514) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (237514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (238414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (239514) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (240414) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (241414) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (242414) i2c-slave: Data Recived = LED_ON[0m
+�ѱ�����m[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab60h ( 43872) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ab88 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001cf24 vaddr=40080000 size=030f4h ( 12532) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1554ch ( 87372) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=00035574 vaddr=400830f4 size=0ae5ch ( 44636) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (209) cpu_start: Pro cpu start user code[0m
+[0;32mI (209) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (209) app_init: Application information:[0m
+[0;32mI (212) app_init: Project name:     i2c_slave[0m
+[0;32mI (217) app_init: App version:      1[0m
+[0;32mI (222) app_init: Compile time:     Nov  3 2024 07:54:02[0m
+[0;32mI (228) app_init: ELF file SHA256:  07b680123...[0m
+[0;32mI (233) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (238) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (243) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (248) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (253) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (266) heap_init: At 3FFB2C68 len 0002D398 (180 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (278) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 4008DF50 len 000120B0 (72 KiB): IRAM[0m
+[0;32mI (293) spi_flash: detected chip: generic[0m
+[0;32mI (296) spi_flash: flash io: dio[0m
+[0;33mW (300) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (313) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (334) i2c-slave: I2C Slave initialized successfully[0m
+[0;32mI (844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (1844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (2844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (3844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (4844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (5844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (6844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (7844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (8844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (9844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (10844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (11844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (12844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (13844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (14844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (15844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (16844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (17844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (18844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (19844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (21844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (22844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (23844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (24844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (25844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (26844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (27844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (28844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (29844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (30844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (31844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (32844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (33844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (34844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (35844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (36844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (37844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (38844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (39844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (40844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (42844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (43844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (44844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (45844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (46844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (48844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (49844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (50844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (51844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (52844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (53844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (54844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (55844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (56844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (57844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (58844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (59844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (60844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (61844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (62844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (63844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (64844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (65844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (66944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (67844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (68844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (69844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (70844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (71944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (72944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (73944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (74844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (75944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (76844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (77944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (78944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (79944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (80944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (81844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (82944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (83844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (84844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (85844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (86844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (87944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (88944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (89944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (90944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (91844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (92944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (93844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (94844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (96844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (97844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (98944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (100844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (101844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (102844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (103844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (104844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (105944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (106844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (107944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (108944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (109944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (110944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (111844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (112844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (113844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (114844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (115944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (116844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (117944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (118944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (119944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (120944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (121844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (122944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (123844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (124844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (125844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (126844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (127944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (128944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (129944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (130844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (131944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (132844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (133944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (134944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (135944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (136944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (137844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (138944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (139844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (140844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (141844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (144844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (145944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (146844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (147844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (148844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (149844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (150944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (151944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (152844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (153844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (154844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (155844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (156944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (157844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (158944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (159944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (160944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (161944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (162844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (163944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (164844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (165844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (167844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (168844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (169944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (170844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (171844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (172844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (173844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (174944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (175944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (176944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (177944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (178844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (179944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (180844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (181844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (182844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (183844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (184944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (185844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (186944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (187944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (188944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (189944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (190844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (191844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (192844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (193944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (194844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (195944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (196844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (197844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (198844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (199844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (200944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (201844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (202944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (203944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (204944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (205944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (206944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (207844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (208944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (209844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (210944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (211944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (212944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (213944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (215844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (216844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (217844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (218844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (219944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (220844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (221844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (222844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (223844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (224944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (225844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (226944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (227944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (228944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (229944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (230844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (231844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (232844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (233844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (234944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (235844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (236944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (237944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (238944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (239944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (240844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (241944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (242844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (243844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (244844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (245844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (246944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (247844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (248944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (249944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (250944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (251844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (252944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (253944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (254944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (255944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (256944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (259944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (260844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (261944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (262944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (263944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (264844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (265944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (266844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (267944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (268944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (269944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (270944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (271844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (272944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (273844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (274844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (275844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (276844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (277944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (278944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (279944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (280944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (282844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (283944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (284944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (285944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (286944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (287844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (288944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (289844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (290844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (291844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (292844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (293944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (294944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (295944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (296944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (298844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (299944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (300944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (301944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (302944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (303844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (304944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (305844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (306844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (307944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (308944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (309944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (310944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (311844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (312944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (313844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (314844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (315844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (316844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (317944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (318944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (319944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (320944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (321844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (322944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (324844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (325844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (326844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (327944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (328944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (329844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (330844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (331844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (332944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (333844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (334844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (335844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (336844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (337944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (340844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (341844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (342844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (343844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (344944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (345844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (346944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (347944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (348944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (349944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (350844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (351944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (353844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (354844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (355844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (356844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (357844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (358944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (359944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (360944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (361944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (362844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (363944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (364844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (367844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (368844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (369844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (370944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (371844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (372844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (373844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (374844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (376944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (377844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (378844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (380844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (381844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (382844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (383844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (384844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (385944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (386844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (387944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (388944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (389944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (390844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (391944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (392844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (393944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (394944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (395944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (396944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (398844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (399844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (400844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (401844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (402944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (404844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (405844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (406844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (407844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (408944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (409844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (410844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (411944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (412944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (413944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (414944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (415844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (416944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (417844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (418844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (419844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (420844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (421944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (422944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (423944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (424944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (425844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (426944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (428844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (429844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (430844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (431844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (432944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (433844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (434844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (435844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (436844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (437944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (438944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (439944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (440844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (441944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (442844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (443944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (444944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (445944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (446944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (447844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (448944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (449844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (450844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (451844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (452844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (453944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (454844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (455944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (456944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (457944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (458944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (459844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (460844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (461944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (462944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (463944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (464944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (465844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (466944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (467844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (468844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (469844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (470844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (471944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (472844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (473944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (474944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (475944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (476944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (477844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (478944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (479844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (480844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (481844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (482844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (483944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (484944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (485944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (486944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (487844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (488944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (489844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (490844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (491844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (492844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (493944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (494844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (495944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (496944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (497944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (498944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (499844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (500844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (501844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (502844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (503944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (504844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (505944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (506944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (507944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (508844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (509944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (510844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (511944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (512944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (513944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (514944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (515944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (516944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (517844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (518944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (519844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (520844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (521844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (522944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (523844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (524844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (525844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (526844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (527944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (528844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (529944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (530944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (531944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (532944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (533844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (534944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (535844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (536844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (537844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (538844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (539944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (540944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (541944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (542944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (543844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (544944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (545844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (546844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (547844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (548844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (549944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (550844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (551944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (552944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (553944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (554944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (555844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (556944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (557844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (558844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (559844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (560844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (561944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (562944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (563844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (564844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (565844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (566844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (567944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (568844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (569944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (570944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (571944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (572944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (573844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (574944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (575844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (576844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (577844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (578844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (579944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (580844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (581944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (582944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (583944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (584944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (585844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (586844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (587844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (588944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (589844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (590944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (591844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (592844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (593844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (594844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (595944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (596844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (597944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (598944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (599944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (600944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (601844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (602844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (603844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (604844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (605944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (606844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (607944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (608944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (609944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (610944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (611844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (612944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (613844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (614844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (615944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (616944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (617944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (618944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (619844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (620944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (621844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (622844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (623844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (624844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (625944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (626944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (627944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (628944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (629844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (630944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (631844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (632844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (633844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (634844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (635944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (636844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (637944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (638944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (639944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (640944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (641844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (642844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (643844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (644844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (645944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (646844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (647944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (648944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (649944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (650944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (651844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (652944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (653844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (654844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (655844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (656944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (657844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (658944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (659844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (660844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (661844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (662844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (663944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (664944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (665944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (666944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (667944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (668844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (669944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (670844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (671944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (672944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (673944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (674944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (675844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (676944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (677844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (678844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (679844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (680844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (681944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (682844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (683944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (684944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (685944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (686944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (687844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (688844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (689844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (690844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (691944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (692844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (693944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (694944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (695944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (696944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (697844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (698944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (699844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (700844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (701844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (702844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (703944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (704944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (705944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (706944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (707844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (708944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (709844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (710844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (711844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (712844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (713944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (714844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (715944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (716944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (717844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (718844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (719844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (720844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (721944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (722844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (723944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (724944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (725944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (726944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (727844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (728844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (729844) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (730844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (731944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (732844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (733944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (734944) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (735944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (736844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (737944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (738844) i2c-slave: Data Recived = LED_OFF[0m
+[0;32mI (739944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (741944) i2c-slave: Data Recived = LED_ON[0m
+[0;32mI (743944) i2c-slave: Data Recived = LED_ON[0m
