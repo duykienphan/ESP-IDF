@@ -1,105 +1,131 @@
 #include <stdio.h>
 #include <string.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/Task.h"
 #include "esp_log.h"
 #include "driver/i2c.h"
+#include "driver/gpio.h"
 
-static const char *TAG = "i2c-master";
+#define I2C_SLAVE_ADDR 0x32
+#define RX_BUFFER_LEN 255
+#define TX_BUFFER_LEN 255
+#define TIMEOUT_MS 1000
+#define DELAY_MS 3000
 
-#define I2C_MASTER_SCL_IO 22               /*!< gpio number for I2C master clock */
-#define I2C_MASTER_SDA_IO 21               /*!< gpio number for I2C master data  */
-#define I2C_MASTER_FREQ_HZ 100000        /*!< I2C master clock frequency */
-#define I2C_MASTER_TX_BUF_DISABLE 0                           /*!< I2C master doesn't need buffer */
-#define I2C_MASTER_RX_BUF_DISABLE 0                           /*!< I2C master doesn't need buffer */
-#define SLAVE_ADDRESS 0x0A
+#define LED_PIN 2
 
-#define WRITE_BIT I2C_MASTER_WRITE              /*!< I2C master write */
-#define READ_BIT I2C_MASTER_READ                /*!< I2C master read */
-#define ACK_CHECK_EN 0x1                        /*!< I2C master will check ack from slave*/
-#define ACK_CHECK_DIS 0x0                       /*!< I2C master will not check ack from slave */
-#define ACK_VAL 0x0                             /*!< I2C ack value */
-#define NACK_VAL 0x1                            /*!< I2C nack value */
+static const char *TAG = "MASTER";
 
-int i2c_master_port = 0;
-static esp_err_t i2c_master_init(void)
+static esp_err_t set_i2c(void)
 {
-  
-    i2c_config_t conf = {
-        .mode = I2C_MODE_MASTER,
-        .sda_io_num = I2C_MASTER_SDA_IO,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_io_num = I2C_MASTER_SCL_IO,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
-        .master.clk_speed = I2C_MASTER_FREQ_HZ,
-        // .clk_flags = 0,          /*!< Optional, you can use I2C_SCLK_SRC_FLAG_* flags to choose i2c source clock here. */
-    };
-    esp_err_t err = i2c_param_config(i2c_master_port, &conf);
-    if (err != ESP_OK) {
-        return err;
-    }
-    return i2c_driver_install(i2c_master_port, conf.mode, I2C_MASTER_RX_BUF_DISABLE, I2C_MASTER_TX_BUF_DISABLE, 0);
+    i2c_config_t i2c_config = {};
+
+    i2c_config.mode = I2C_MODE_MASTER;
+    i2c_config.sda_io_num = 21;
+    i2c_config.scl_io_num = 22;
+    i2c_config.sda_pullup_en = true;
+    i2c_config.scl_pullup_en = true;
+    i2c_config.master.clk_speed = 400000;
+    i2c_config.clk_flags = 0;
+
+    ESP_ERROR_CHECK(i2c_param_config(I2C_NUM_0, &i2c_config));
+    ESP_ERROR_CHECK(i2c_driver_install(I2C_NUM_0, I2C_MODE_MASTER, 0, 0, 0));
+
+    return ESP_OK;
 }
 
-static esp_err_t i2c_master_send(uint8_t message[], int len)
+esp_err_t i2c_master_write_device(i2c_port_t i2c_num, uint8_t address, const uint8_t *data, size_t size)
 {
-    ESP_LOGI(TAG, "Sending Message = %s", message);   
-    
-    esp_err_t ret; 
-    i2c_cmd_handle_t cmd = i2c_cmd_link_create();    
+    i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+    esp_err_t ret;
+
     i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, SLAVE_ADDRESS << 1 | WRITE_BIT, ACK_CHECK_EN);
-    i2c_master_write(cmd, message, len, ACK_CHECK_EN);
+    i2c_master_write_byte(cmd, (address << 1) | I2C_MASTER_WRITE, true);
+    i2c_master_write(cmd, (uint8_t *)data, size, true);
     i2c_master_stop(cmd);
-    
-    ret = i2c_master_cmd_begin(i2c_master_port, cmd, 1000 / portTICK_PERIOD_MS);
+
+    ret = i2c_master_cmd_begin(i2c_num, cmd, pdMS_TO_TICKS(TIMEOUT_MS));
+
     i2c_cmd_link_delete(cmd);
     return ret;
 }
 
-esp_err_t i2c_master_read_slave(uint8_t *data, int data_len) {
-    if (data == NULL) {
-        return ESP_ERR_INVALID_ARG;
-    }
-
+esp_err_t i2c_master_read_device(i2c_port_t i2c_num, uint8_t address, uint8_t *data, size_t size)
+{
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    
-    // Write slave address and read bit
-    i2c_master_write_byte(cmd, (SLAVE_ADDRESS << 1) | I2C_MASTER_READ, ACK_CHECK_EN);
-    
-    // Read data from slave
-    if (data_len > 1) {
-        i2c_master_read(cmd, data, data_len - 1, I2C_MASTER_ACK);
-    }
-    i2c_master_read_byte(cmd, data + data_len - 1, I2C_MASTER_NACK);  // Read last byte with NACK
-    
-    i2c_master_stop(cmd);
-    esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_PERIOD_MS);
-    i2c_cmd_link_delete(cmd);
+    esp_err_t ret;
 
+    i2c_master_start(cmd);
+    i2c_master_write_byte(cmd, (address << 1) | I2C_MASTER_READ, true);
+    if (size > 1) {
+        i2c_master_read(cmd, data, size - 1, I2C_MASTER_ACK); // Read all but the last byte
+    }
+    i2c_master_read_byte(cmd, data + size - 1, I2C_MASTER_NACK); // Read the last byte
+    i2c_master_stop(cmd);
+
+    ret = i2c_master_cmd_begin(i2c_num, cmd, pdMS_TO_TICKS(TIMEOUT_MS));
+
+    i2c_cmd_link_delete(cmd);
     return ret;
 }
 
 void app_main(void)
 {
-    const uint8_t  on_command[] = "LED_ON";
-    const uint8_t  off_command[] = "LED_OFF";
-    uint8_t received_data[255] = {0};  // Buffer to store received data
-    ESP_ERROR_CHECK(i2c_master_init());
-    ESP_LOGI(TAG, "I2C initialized successfully");
+    uint8_t rx_data[RX_BUFFER_LEN];
+    char sendata[TX_BUFFER_LEN];
+    int i = 0;
 
-    while(1)
+    ESP_ERROR_CHECK(set_i2c());
+
+    esp_rom_gpio_pad_select_gpio(LED_PIN);
+    gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
+
+    while (1)
     {
-        i2c_master_send(on_command, sizeof(on_command));
-        vTaskDelay(1000/ portTICK_PERIOD_MS);
-        i2c_master_send(off_command, sizeof(off_command));
-        vTaskDelay(1000/ portTICK_PERIOD_MS);  
+        i++;
+        snprintf(sendata, TX_BUFFER_LEN, "MASTER %d\n", i);
 
-        if (i2c_master_read_slave(received_data, sizeof(received_data)) == ESP_OK){
-            ESP_LOGI(TAG, "Received data: %s", received_data);
+        // Clear rx_data buffer before receiving new data
+        memset(rx_data, 0, RX_BUFFER_LEN);
+
+        vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
+
+        // Write data to the slave device
+        esp_err_t write_ret = i2c_master_write_device(I2C_NUM_0, 
+                                                    I2C_SLAVE_ADDR, 
+                                                    (uint8_t *)sendata, 
+                                                    strlen(sendata));
+        if (write_ret == ESP_OK)
+        {
+            ESP_LOGI(TAG, "Data sent: %s", sendata);
         }
-        else {
-            ESP_LOGE(TAG, "Failed to read from slave");
+        else
+        {
+            ESP_LOGE(TAG, "I2C write error: %s", esp_err_to_name(write_ret));
+        }
+
+        // Read data from the slave device
+        esp_err_t read_ret = i2c_master_read_device(I2C_NUM_0, 
+                                                    I2C_SLAVE_ADDR, 
+                                                    rx_data, 
+                                                    RX_BUFFER_LEN);
+        if (read_ret == ESP_OK)
+        {
+            ESP_LOGI(TAG, "Received data: %s", (char *)rx_data);
+        }
+        else
+        {
+            ESP_LOGE(TAG, "I2C read error: %s", esp_err_to_name(read_ret));
+        }
+
+
+        if(strncmp((const char*)rx_data, "LED ON", 6) == 0)
+        {   
+            gpio_set_level(LED_PIN, 1);
+        }
+        else if(strncmp((const char*)rx_data, "LED OFF", 7) == 0)
+        {
+            gpio_set_level(LED_PIN, 0);
         }
     }
-    
 }

@@ -1,87 +1,92 @@
 #include <stdio.h>
 #include <string.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/Task.h"
 #include "esp_log.h"
 #include "driver/i2c.h"
-#include "driver/gpio.h"
 
-static const char *TAG = "i2c-slave";
+#define I2C_SLAVE_ADDR 0x32
+#define TIMEOUT_MS 1000
+#define DELAY_MS 500
 
-#define LED_PIN 2
+#define RX_BUFFER_LEN 255
+#define TX_BUFFER_LEN 255
 
-#define I2C_SLAVE_SCL_IO 22               /*!< gpio number for I2C master clock */
-#define I2C_SLAVE_SDA_IO 21               /*!< gpio number for I2C master data  */
-#define I2C_SLAVE_FREQ_HZ 100000        /*!< I2C master clock frequency */
-#define I2C_SLAVE_TX_BUF_LEN 255                        /*!< I2C master doesn't need buffer */
-#define I2C_SLAVE_RX_BUF_LEN 255                           /*!< I2C master doesn't need buffer */
-#define ESP_SLAVE_ADDR 0x0A
+uint8_t rx_data[RX_BUFFER_LEN] = {0};
+uint8_t tx_data[TX_BUFFER_LEN] = "LED ON";
 
-#define WRITE_BIT I2C_MASTER_WRITE              /*!< I2C master write */
-#define READ_BIT I2C_MASTER_READ                /*!< I2C master read */
-#define ACK_CHECK_EN 0x1                        /*!< I2C master will check ack from slave*/
-#define ACK_CHECK_DIS 0x0                       /*!< I2C master will not check ack from slave */
-#define ACK_VAL 0x0                             /*!< I2C ack value */
-#define NACK_VAL 0x1                            /*!< I2C nack value */
+static const char *TAG = "SLAVE";
 
-int i2c_slave_port = 0;
-static esp_err_t i2c_slave_init(void)
+static esp_err_t set_i2c(void)
 {
-  
-    i2c_config_t conf_slave = {
-    .sda_io_num = I2C_SLAVE_SDA_IO,          // select GPIO specific to your project
-    .sda_pullup_en = GPIO_PULLUP_ENABLE,
-    .scl_io_num = I2C_SLAVE_SCL_IO,          // select GPIO specific to your project
-    .scl_pullup_en = GPIO_PULLUP_ENABLE,
-    .mode = I2C_MODE_SLAVE,
-    .slave.addr_10bit_en = 0,
-    .slave.slave_addr = ESP_SLAVE_ADDR,      // address of your project
-    .clk_flags = 0,
-    };
-    esp_err_t err = i2c_param_config(i2c_slave_port, &conf_slave);
-    if (err != ESP_OK) {
-        return err;
-    }
-    return i2c_driver_install(i2c_slave_port, conf_slave.mode, I2C_SLAVE_RX_BUF_LEN, I2C_SLAVE_TX_BUF_LEN, 0);
+    i2c_config_t i2c_config = {};
+
+    i2c_config.mode = I2C_MODE_SLAVE;
+    i2c_config.sda_io_num = 21;
+    i2c_config.scl_io_num = 22;
+    i2c_config.sda_pullup_en = true;
+    i2c_config.scl_pullup_en = true;
+
+    i2c_config.slave.addr_10bit_en = 0,
+    i2c_config.slave.slave_addr = I2C_SLAVE_ADDR,
+
+    i2c_config.clk_flags = 0;
+
+    ESP_ERROR_CHECK(i2c_param_config(I2C_NUM_0, &i2c_config));
+    ESP_ERROR_CHECK(i2c_driver_install(I2C_NUM_0, I2C_MODE_SLAVE, RX_BUFFER_LEN, TX_BUFFER_LEN, 0));
+
+    return ESP_OK;
 }
 
-void i2c_slave_send_data(uint8_t *data, int len) {
-    // Write data to the slave's TX buffer
-    if (len > I2C_SLAVE_TX_BUF_LEN) {
-        len = I2C_SLAVE_TX_BUF_LEN; // Limit data to buffer size
+void i2c_handle_task(void *pv)
+{
+    while (1)
+    {
+        // Wait for data to be available in the receive buffer
+        int len = i2c_slave_read_buffer(I2C_NUM_0, 
+                                        rx_data, 
+                                        RX_BUFFER_LEN, 
+                                        pdMS_TO_TICKS(100));
+        if (strcmp((char *)tx_data, "LED ON") == 0)
+        {
+            strcpy((char *)tx_data, "LED OFF");
+        }
+        else
+        {
+            strcpy((char *)tx_data, "LED ON");
+        }
+
+        if (len > 0)
+        {
+            ESP_LOGI(TAG, "Data Received: %.*s", len, rx_data);
+
+            // Write response back to the master
+            esp_err_t ret = i2c_slave_write_buffer( I2C_NUM_0, 
+                                                    (const uint8_t *)tx_data, 
+                                                    32, 
+                                                    pdMS_TO_TICKS(100));
+            if (ret == ESP_OK)
+            {
+                ESP_LOGI(TAG, "Response sent: %s", tx_data);
+            }
+            else
+            {
+                ESP_LOGE(TAG, "Failed to send response: %s", esp_err_to_name(ret));
+            }
+
+            // Clear the receive buffer
+            memset(rx_data, 0, RX_BUFFER_LEN);
+        }
+        
+        vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
     }
-    i2c_slave_write_buffer(i2c_slave_port, (uint8_t*)data, sizeof(data), 1000 / portTICK_PERIOD_MS);
 }
 
 void app_main(void)
 {
-    uint8_t  received_data[I2C_SLAVE_RX_BUF_LEN] = {0};
-    uint8_t  data_send[] = "LED_IS_ON";
+    ESP_ERROR_CHECK(set_i2c());
 
-    esp_rom_gpio_pad_select_gpio(LED_PIN);
-    gpio_set_direction(LED_PIN, GPIO_MODE_OUTPUT);
-
-    ESP_ERROR_CHECK(i2c_slave_init());
-    ESP_LOGI(TAG, "I2C Slave initialized successfully");
-    
-    while(1)
-    {
-    i2c_slave_read_buffer(i2c_slave_port, received_data, I2C_SLAVE_RX_BUF_LEN, 100 / portTICK_PERIOD_MS);
-    i2c_reset_rx_fifo(i2c_slave_port);
-
-    if(strncmp((const char*)received_data, "LED_ON", 6) == 0)
-    {   
-        ESP_LOGI(TAG, "Data Recived = %s", received_data);
-        gpio_set_level(LED_PIN, 1);
-        data_send[9] = "LED_IS_ON";
-    }
-    else if(strncmp((const char*)received_data, "LED_OFF", 7) == 0)
-    {
-        ESP_LOGI(TAG, "Data Recived = %s", received_data);   
-        gpio_set_level(LED_PIN, 0);
-        data_send[10] = "LED_IS_OFF";
-    }
-    memset(received_data, 0, I2C_SLAVE_RX_BUF_LEN);
-
-    i2c_slave_send_data(data_send, sizeof(data_send));
-    }
-
+    // Create a thread
+    //xTaskCreate(i2c_handle_task, "handle", 4096, NULL, 1, NULL);
+    i2c_handle_task(NULL);
 }

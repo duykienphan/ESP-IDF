@@ -1,0 +1,268 @@
+��+j5
+[0;32mI (36) bets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  3 2024 08:50:41[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0af60h ( 44896) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001af88 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d324 vaddr=40080000 size=02cf4h ( 11508) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=191e0h (102880) map[0m
+[0;32mI (170) esp_image: segment 4: paddr=00039208 vaddr=40082cf4 size=0b300h ( 45824) load[0m
+[0;32mI (195) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (195) boot: Disabling RNG early entropy source...[0m
+[0;32mI (207) cpu_start: Multicore app[0m
+[0;32mI (215) cpu_start: Pro cpu start user code[0m
+[0;32mI (215) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (215) app_init: Application information:[0m
+[0;32mI (218) app_init: Project name:     i2c_master[0m
+[0;32mI (223) app_init: App version:      1[0m
+[0;32mI (228) app_init: Compile time:     Nov  3 2024 08:50:22[0m
+[0;32mI (234) app_init: ELF file SHA256:  34da8b83c...[0m
+[0;32mI (239) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (244) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (249) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (254) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB2C68 len 0002D398 (180 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008E000 len 00012000 (72 KiB): IRAM[0m
+[0;32mI (299) spi_flash: detected chip: generic[0m
+[0;32mI (302) spi_flash: flash io: dio[0m
+[0;33mW (306) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (319) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (330) main_task: Started on CPU0[0m
+[0;32mI (340) main_task: Calling app_main()[0m
+[0;32mI (3340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (6340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (9340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (12340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (15340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (18340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (21340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (24340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (27340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (30340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (33340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (36340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (39340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (42340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (45340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (48340) MASTER: Received data: Sent from Slave[0m
+[0;32mI (51340) MASTER: Received data: Sent from Slave[0m
+������m[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0abb8h ( 43960) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001abe0 vaddr=3ffb0000 size=02494h (  9364) load[0m
+[0;32mI (124) esp_image: segment 2: paddr=0001d07c vaddr=40080000 size=02f9ch ( 12188) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1549ch ( 87196) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=000354c4 vaddr=40082f9c size=0afb4h ( 44980) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (209) cpu_start: Pro cpu start user code[0m
+[0;32mI (209) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (209) app_init: Application information:[0m
+[0;32mI (212) app_init: Project name:     i2c_slave[0m
+[0;32mI (217) app_init: App version:      1[0m
+[0;32mI (222) app_init: Compile time:     Nov  3 2024 09:34:26[0m
+[0;32mI (228) app_init: ELF file SHA256:  78d78bc5e...[0m
+[0;32mI (233) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (238) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (243) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (248) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (253) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (260) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (266) heap_init: At 3FFB2E68 len 0002D198 (180 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (279) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (285) heap_init: At 4008DF50 len 000120B0 (72 KiB): IRAM[0m
+[0;32mI (293) spi_flash: detected chip: generic[0m
+[0;32mI (296) spi_flash: flash io: dio[0m
+[0;33mW (300) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (313) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (324) main_task: Started on CPU0[0m
+[0;32mI (334) main_task: Calling app_main()[0m
+[0;32mI (2934) SLAVE: Data Received: MASTER 1 
+[0m
+[0;31mE (2934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (6534) SLAVE: Data Received: MASTER 2 
+[0m
+[0;31mE (6534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (8934) SLAVE: Data Received: MASTER 3 
+[0m
+[0;31mE (8934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (12534) SLAVE: Data Received: MASTER 4 
+[0m
+[0;31mE (12534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (14934) SLAVE: Data Received: MASTER 5 
+[0m
+[0;31mE (14934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (18534) SLAVE: Data Received: MASTER 6 
+[0m
+[0;31mE (18534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (20934) SLAVE: Data Received: MASTER 7 
+[0m
+[0;31mE (20934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (24534) SLAVE: Data Received: MASTER 8 
+[0m
+[0;31mE (24534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (26934) SLAVE: Data Received: MASTER 9 
+[0m
+[0;31mE (26934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (30534) SLAVE: Data Received: MASTER 10 
+[0m
+[0;31mE (30534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (32934) SLAVE: Data Received: MASTER 11 
+[0m
+[0;31mE (32934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (36534) SLAVE: Data Received: MASTER 12 
+[0m
+[0;31mE (36534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (38934) SLAVE: Data Received: MASTER 13 
+[0m
+[0;31mE (38934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (42534) SLAVE: Data Received: MASTER 14 
+[0m
+[0;31mE (42534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (44934) SLAVE: Data Received: MASTER 15 
+[0m
+[0;31mE (44934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (48534) SLAVE: Data Received: MASTER 16 
+[0m
+[0;31mE (48534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (50934) SLAVE: Data Received: MASTER 17 
+[0m
+[0;31mE (50934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (54534) SLAVE: Data Received: MASTER 18 
+[0m
+[0;31mE (54534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (56934) SLAVE: Data Received: MASTER 19 
+[0m
+[0;31mE (56934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (60534) SLAVE: Data Received: MASTER 20 
+[0m
+[0;31mE (60534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (62934) SLAVE: Data Received: MASTER 21 
+[0m
+[0;31mE (62934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (66534) SLAVE: Data Received: MASTER 22 
+[0m
+[0;31mE (66534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (68934) SLAVE: Data Received: MASTER 23 
+[0m
+[0;31mE (68934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (72534) SLAVE: Data Received: MASTER 24 
+[0m
+[0;31mE (72534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (74934) SLAVE: Data Received: MASTER 25 
+[0m
+[0;31mE (74934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (78534) SLAVE: Data Received: MASTER 26 
+[0m
+[0;31mE (78534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (80934) SLAVE: Data Received: MASTER 27 
+[0m
+[0;31mE (80934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (84534) SLAVE: Data Received: MASTER 28 
+[0m
+[0;31mE (84534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (86934) SLAVE: Data Received: MASTER 29 
+[0m
+[0;31mE (86934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (90534) SLAVE: Data Received: MASTER 30 
+[0m
+[0;31mE (90534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (92934) SLAVE: Data Received: MASTER 31 
+[0m
+[0;31mE (92934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (96534) SLAVE: Data Received: MASTER 32 
+[0m
+[0;31mE (96534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (98934) SLAVE: Data Received: MASTER 33 
+[0m
+[0;31mE (98934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (102534) SLAVE: Data Received: MASTER 34 
+[0m
+[0;31mE (102534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (104934) SLAVE: Data Received: MASTER 35 
+[0m
+[0;31mE (104934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (108534) SLAVE: Data Received: MASTER 36 
+[0m
+[0;31mE (108534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (110934) SLAVE: Data Received: MASTER 37 
+[0m
+[0;31mE (110934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (114534) SLAVE: Data Received: MASTER 38 
+[0m
+[0;31mE (114534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (116934) SLAVE: Data Received: MASTER 39 
+[0m
+[0;31mE (116934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (120534) SLAVE: Data Received: MASTER 40 
+[0m
+[0;31mE (120534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (122934) SLAVE: Data Received: MASTER 41 
+[0m
+[0;31mE (122934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (126534) SLAVE: Data Received: MASTER 42 
+[0m
+[0;31mE (126534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (128934) SLAVE: Data Received: MASTER 43 
+[0m
+[0;31mE (128934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (132534) SLAVE: Data Received: MASTER 44 
+[0m
+[0;31mE (132534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (134934) SLAVE: Data Received: MASTER 45 
+[0m
+[0;31mE (134934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (138534) SLAVE: Data Received: MASTER 46 
+[0m
+[0;31mE (138534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (140934) SLAVE: Data Received: MASTER 47 
+[0m
+[0;31mE (140934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (144534) SLAVE: Data Received: MASTER 48 
+[0m
+[0;31mE (144534) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (146934) SLAVE: Data Received: MASTER 49 
+[0m
+[0;31mE (146934) SLAVE: Failed to send response: ERROR[0m
+[0;32mI (150534) SLAVE: Data Received: MASTER 50 
+[0m
+[0;31mE (150534) SLAVE: Failed to send response: ERROR[0m
